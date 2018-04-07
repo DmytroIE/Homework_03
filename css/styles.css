@@ -5,17 +5,17 @@ body {
     line-height: 24px;
 }
 
-.site-navigation a {
+.site-navigation-list a {
     text-transform: uppercase;
     text-decoration: none;
     color:  #626262;
 }
 
-.site-navigation a:hover {
+.site-navigation-list a:hover {
     color: #03a9f4;
 }  
 
-.site-navigation {
+.site-navigation-list {
     list-style: none;
 }
 
@@ -52,4 +52,27 @@ body {
 }
 .loadmore-button:hover {
     background-color: #f5d7d7;
+}
+
+/* visually-hidden helper */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+* {
+    outline: 1px solid red;
 }
