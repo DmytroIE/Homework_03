@@ -1,37 +1,110 @@
+
 body {
     font-family: 'Playfair Display', serif;
     color: #626262;
-    font-size: 14px;
-    line-height: 24px;
+}
+
+* {
+    margin: 0;/*?????????????*/
+    padding:0;
+}
+
+
+
+/*----HEADER SELECTORS----*/
+.page-header {
+    width: 580px;
+    margin: 0px auto 100px;
+    padding: 72px 0px 0px 0px; /*почему для верхнего отступа используется не margin 72???*/
+
+}
+
+.site-navigation-list {
+    font-size: 0px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.site-navigation-list li {
+    display:inline-block;
+}
+.site-navigation-list li:nth-of-type(1) {
+    margin-right: 123px;
+}
+.site-navigation-list li:nth-of-type(2) {
+    margin-right: 105px;
+}
+.site-navigation-list li:nth-of-type(3) {
+    margin-right: 98px;
+}
+.site-navigation-list li:nth-of-type(4) {
+    margin-right: 0;
 }
 
 .site-navigation-list a {
+    font-size: 14px; 
+    line-height: 24px;
     text-transform: uppercase;
     text-decoration: none;
     color:  #626262;
 }
-
 .site-navigation-list a:hover {
     color: #03a9f4;
 }  
 
-.site-navigation-list {
+
+/*----MAIN PART SELECTORS----*/
+
+.main {
+    width: 900px;
+    margin: 0 auto;
+}
+.main-list { 
     list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0; 
+}
+.main-list-item:nth-of-type(2n+1) {
+    margin-right: 60px;
+    margin-bottom: 130px;
+}
+.main-list-item:nth-of-type(2n) {
+    margin-right: 0px;
+    margin-bottom: 130px;
+}
+.main-list-item:nth-last-of-type(2) {
+    margin-right: 60px;
+    margin-bottom: 50px;
+}
+.main-list-item:nth-last-of-type(1) {
+    margin-right: 0px;
+    margin-bottom: 50px;
+}
+.main-list-item {
+    display: inline-block;
+    width: 420px;
 }
 
-.main-list {
-    list-style: none;
+.main-list-article-img {
+    margin-bottom: 30px;
 }
-
-.main-list-article-column a{
+.main-list-article-column {
+    margin-bottom: 27px;
+}
+.main-list-article-column a {
     font-family: 'Ubuntu', sans-serif;
     color: #b4ad9e;
     font-size: 14px;
     line-height: 17px;
-    text-transform: uppercase;
+    text-transform: uppercase;    
     text-decoration: none;
 }
 
+
+.main-list-article-header {
+    margin-bottom: 32px;
+}
 .main-list-article-header a{
     color: #626262;
     font-size: 30px;
@@ -39,16 +112,26 @@ body {
     text-decoration: none;
 }
 
+.main-list-article p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.loadmore {
+    text-align: center;
+}
+
 .loadmore-button {
+
     font-family: 'Playfair Display', serif;
     color: #626262;
     font-size: 20px;
     line-height: 24px;
     border: 1px solid #626262;
-    padding: 18px 1px;
+    padding: 18px 36px;
     background-color: transparent;
     transition: 0.3s;
-    width: 166px;
+    /*width: 166px;*/
 }
 .loadmore-button:hover {
     background-color: #f5d7d7;
