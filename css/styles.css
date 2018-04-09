@@ -1,10 +1,9 @@
+/*ориентир http://pow-wow.com.ua/category/multfilmy-2/obzory-multfilmov/*/
 
-body {
-    font-family: 'Playfair Display', serif;
-    color: #626262;
-}
 
 * {
+    font-family: 'Playfair Display', serif;
+    color: #626262;
     margin: 0;/*?????????????*/
     padding:0;
 }
@@ -16,34 +15,32 @@ body {
     width: 580px;
     margin: 0px auto 100px;
     padding: 72px 0px 0px 0px; /*почему для верхнего отступа используется не margin 72???*/
-
 }
-
 .site-navigation-list {
     font-size: 0px;
+    line-height: 0px; /*нужно ли здесь?*/
     list-style: none;
-    padding: 0px;
-    margin: 0px;
 }
-.site-navigation-list li {
+.site-navigation-list-item {
     display:inline-block;
+    font-size: 14px; /*унаследуется для ссылки ниже*/
+    line-height: 24px/*сделать normal????????????????????*/; /*унаследуется для ссылки ниже*/
 }
-.site-navigation-list li:nth-of-type(1) {
+.site-navigation-list-item:nth-of-type(1) {
     margin-right: 123px;
 }
-.site-navigation-list li:nth-of-type(2) {
+.site-navigation-list-item:nth-of-type(2) {
     margin-right: 105px;
 }
-.site-navigation-list li:nth-of-type(3) {
+.site-navigation-list-item:nth-of-type(3) {
     margin-right: 98px;
 }
-.site-navigation-list li:nth-of-type(4) {
+.site-navigation-list-item:nth-of-type(4) {
     margin-right: 0;
 }
 
-.site-navigation-list a {
-    font-size: 14px; 
-    line-height: 24px;
+.site-navigation-list-item a {
+
     text-transform: uppercase;
     text-decoration: none;
     color:  #626262;
@@ -61,9 +58,8 @@ body {
 }
 .main-list { 
     list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0; 
+    font-size: 0;
+    line-height: 0px; /*нужно ли здесь?*/
 }
 .main-list-item:nth-of-type(2n+1) {
     margin-right: 60px;
@@ -84,19 +80,29 @@ body {
 .main-list-item {
     display: inline-block;
     width: 420px;
+    vertical-align: top;
+}
+
+.main-list-article-img-cont {
+    width: 420px;
+    height: 280px;
+    margin-bottom: 30px; 
+    text-align: center;
 }
 
 .main-list-article-img {
-    margin-bottom: 30px;
+    width: 100%;
+    height: 100%;
+    /*margin-bottom: 30px; /*почему это работает для строчного элемента???*/
 }
 .main-list-article-column {
     margin-bottom: 27px;
+    font-size: 14px; /*унаследуется для ссылки ниже*/
+    line-height: 17px; /*унаследуется для ссылки ниже*/
 }
 .main-list-article-column a {
     font-family: 'Ubuntu', sans-serif;
     color: #b4ad9e;
-    font-size: 14px;
-    line-height: 17px;
     text-transform: uppercase;    
     text-decoration: none;
 }
@@ -104,15 +110,15 @@ body {
 
 .main-list-article-header {
     margin-bottom: 32px;
+    font-size: 30px; /*унаследуется для ссылки ниже*/
+    line-height: 36px; /*унаследуется для ссылки ниже*/
 }
 .main-list-article-header a{
     color: #626262;
-    font-size: 30px;
-    line-height: 36px;
     text-decoration: none;
 }
 
-.main-list-article p {
+.main-list-article-preview {
     font-size: 14px;
     line-height: 24px;
 }
@@ -131,7 +137,6 @@ body {
     padding: 18px 36px;
     background-color: transparent;
     transition: 0.3s;
-    /*width: 166px;*/
 }
 .loadmore-button:hover {
     background-color: #f5d7d7;
